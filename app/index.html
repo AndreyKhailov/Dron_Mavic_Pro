@@ -55,9 +55,9 @@
                     <a class="social__item" href="#"><img src="images/icon_instagram.svg" alt="instagram"></a>
                 </icon>                    
             </div>
-            <div class="scroll__btn">
+            <control class="scroll__btn">
                 <a href="#"><img src="images/scroll_btn.png" alt="scroll"></a>
-            </div>
+            </control>
         </div>
     </section>
     <!--************ Description section ************-->
@@ -76,15 +76,21 @@
                         позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей 
                         и потрясающими цветами.
                     </p>
-                </div>                
-                <figure class="description__fig">
-                    <img class="description__fig-img" src="images/question_dron.png" alt="mavic" >
-                    <figcapture class="description__fig-text">Лучшая беспилотная технология аэросъемки</figcapture>  
-                </figure>                
-            </div>
-            <div class="scroll__btn">
+                </div> 
+                <slider class="description__slider">
+                    <figure class="description__fig">
+                        <img class="description__fig-img" src="images/2_what-is_dron.jpg" alt="mavic" >
+                        <figcapture class="description__fig-text">Лучшая беспилотная технология аэросъемки</figcapture>  
+                    </figure> 
+                    <control class="description__control">
+                        <img class="description__control-prev" src="images/slider_prev.svg" alt="slider preview">
+                        <img class="description__control-next" src="images/slider_next.svg" alt="slider next">
+                    </control> 
+                </slider>               
+            </div>            
+            <control class="scroll__btn">
                 <a href="#"><img src="images/scroll_btn.svg" alt="scroll"></a>
-            </div>
+            </control>
         </div>
     </section>
     <!--************ Benefits section ************-->
@@ -150,9 +156,9 @@
                     </figure>
                 </section>
             </div>
-            <div class="scroll__btn">
+            <control class="scroll__btn">
                 <a href="#"><img src="images/scroll_btn.svg" alt="scroll"></a>
-            </div>
+            </control>
         </div>
     </section>
     <!--************ Feature section ************-->
@@ -197,9 +203,9 @@
                     </p>
                 </section>
             </div>
-            <div class="scroll__btn">
+            <control class="scroll__btn">
                 <a href="#"><img src="images/scroll_btn.svg" alt="scroll"></a>
-            </div>
+            </control>
         </div>
     </section>
     <!--************ Questions section ************-->
@@ -236,9 +242,9 @@
                     <img src="images/question_dron.png" alt="dron">
                 </section>
             </div>
-            <div class="scroll__btn">
+            <control class="scroll__btn">
                 <a href="#"><img src="images/scroll_btn.svg" alt="scroll"></a>
-            </div>
+            </control>
         </div>
     </section>
     <!--************ Contacts section ************-->
@@ -267,8 +273,8 @@
                 <section class="contacts__form">
                     <h5 class="contacts__form-title">Остались вопросы? </h5>
                     <p class="contacts__form-text">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
-                    <input class="contacts__input" type="text">
-                    <input class="contacts__input" type="email">
+                    <input class="contacts__input" type="text" placeholder="Ваше имя" required aria-required="true">
+                    <input class="contacts__input" type="email" placeholder="Ваше e-mail" required aria-required="true">
                     <textarea class="contacts__textarea" name="" id="" cols="30" rows="10">Что вас интересует?</textarea>
                     <button class="contacts__btn">ОТПРАВИТЬ</button>
                 </section>
@@ -280,9 +286,9 @@
                 </icon>
                 
             </div>
-            <div class="scroll__btn">
+            <control class="scroll__btn">
                 <a href="#"><img src="images/scroll_btn.svg" alt="scroll"></a>
-            </div>
+            </control>
         </div>
     </section>
 
