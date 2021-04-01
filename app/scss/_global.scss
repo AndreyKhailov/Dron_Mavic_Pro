@@ -33,6 +33,7 @@ body {
     overflow-x: hidden;
     position: relative;
     color: #fff;
+    @extend %ubuntu-light;
 }
 
 .container {
@@ -50,6 +51,14 @@ body {
     background-position: top center;
     position: relative;
     padding: 74px 0 102px;
+}
+
+title {
+    @extend %sf-regular;
+    font-size: 44px;
+    line-height: 53px;
+    padding-left: 25px;
+    margin-bottom: 55px;    
 }
 
 .scroll__btn {
