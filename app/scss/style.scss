@@ -162,6 +162,108 @@
     }
 }
 
+//* BENEFITS section
+.benefits {
+    &__inner {
+        display: flex;        
+        flex-wrap: wrap;
+        padding-left: 25px;
+    }
+    &__box {
+        //margin-bottom: 100px;
+        display: flex;
+        align-items: flex-end; 
+        margin-bottom: 100px;  
+        &:nth__child(even){
+            margin-left: 40px;
+            transform: translateY(25px);
+        }                
+        &:nth-child(3) {
+            margin-left: 30px;
+        }
+        &:nth-child(4) {
+            margin-left: 60px;
+        }
+        &:first-child(1),
+        &:nth-child(3) {
+           position: relative;
+           &::before,
+           &::after {
+               content: "";
+               position: absolute;
+               background-repeat: no-repeat;
+               background-position: 0 0;
+            }
+        }
+        &:first-child {
+            &::before {
+                background-image: url("../images/curved_1-2.svg");
+                width: 245px;
+                height: 45px; 
+                right: -56px;
+                top: 31px;           
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url("../images/curved_3-4.svg");
+                width: 254px;
+                height: 43px;    
+                right: -55px;
+                top: 50px;              
+            }
+            &::after {
+                background-image: url("../images/curved_2-3.svg");
+                width: 463px;
+                height: 62px;
+                right: -54px;
+                top: -70px;
+            }
+        }
+    }
+    &__num {
+        line-height: 41px;
+        font-size: 36px;
+        @extend %ubuntu-bold;
+        margin-right: 10px;
+    }
+    &__info {
+        display: flex;          
+    }
+    &__info-img {
+        position: relative;
+        margin-right: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 193px;
+            height: 128px;
+            border: 2px solid #fff;
+            right: -12px;
+            top: -12px;
+            z-index: -1;
+        }
+    }
+    &__info-desc {
+        width: 300px;
+
+    }
+    &__info-title {
+        width: 123px;
+        font-size: 21px;
+        line-height: 24px;
+        @extend %ubuntu-bolt;
+        margin-bottom: 10px;
+    }
+
+    &__info-text {
+        font-size: 15px;
+        line-height: 18px; 
+    }
+    
+}
+
+
 
 
 
