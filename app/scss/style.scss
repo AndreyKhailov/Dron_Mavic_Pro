@@ -1,3 +1,29 @@
-body {
-    background-color: green;
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 30px;
+    right: 0;
+    &__inner {
+        display: font;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        text-transform: uppercase;
+        line-height: 17;
+        font-size: 15px;
+        @extend %ubuntu-medium;
+    }
 }
+
+.header__nav {
+    &__header__nav-item {
+        display: inline-block;
+    }
+}
+
+@import "media";

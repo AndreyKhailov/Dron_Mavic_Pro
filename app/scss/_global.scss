@@ -34,13 +34,14 @@ body {
     position: relative;
     color: #fff;
     @extend %ubuntu-light;
+    font-size: 17px;
+    line-height: 26px;
 }
 
 .container {
     max-width: 1270px;
     padding: 0 15px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
 
 .page-section {
