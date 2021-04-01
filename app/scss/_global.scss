@@ -44,14 +44,28 @@ body {
     margin: 0 auto;    
 }
 
-.page-section {
-    min-height: 100vh;
-    background-image: url("../images/header_bg.jpg");
+.page-section {    
+    background-image: url("../images/bg_pages.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     position: relative;
-    padding: 74px 0 102px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+        opacity: 0.15;
+    }
+    &__wrapper {
+        min-height: 100vh;
+        padding: 74px 0 102px;
+        position: relative;
+        z-index: 1;
+    }
 }
 
 title {
@@ -59,6 +73,7 @@ title {
     font-size: 44px;
     line-height: 53px;
     padding-left: 25px;
+    padding-top: 200px;
     margin-bottom: 55px;    
 }
 
