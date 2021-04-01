@@ -394,13 +394,105 @@
     }       
 }
 
-
-
-
-
-
-
-
-
+//* CONTACTS section
+.contacts {
+    &__inner {
+        display: flex;
+        padding-left: 25px;
+    }
+    &__info {
+        width: 240px;
+        margin-right: 60px;
+    }
+    &__article {
+        margin-bottom: 30px;
+    }
+    &__article-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ubuntu-bold;
+        margin: 0 0 13px;
+    }
+    &__article-phone,
+    &__article-email {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    &__article-email:hover {
+        text-decoration: underline;
+    }
+    &__form {
+        width: 570px;
+        margin-right: 106px;
+    }
+    &__form-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ubuntu-bold;
+        margin: 0 0 13px;        
+    }
+    &__form-text {
+       font-style: 15px;
+       line-height: 18px;
+       margin: 0 0 12px;
+    }
+    &__form-line {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form-input,
+    &__form-textarea {
+       border: none;
+       background:rgba(0, 0, 0, 0.5);
+       @extend %ubuntu-regular;
+       padding: 15px;    
+       font-size: 13px; 
+       line-height: 15px;
+       color: #fff;
+       &::placeholder {
+           color: rgba(#fff, 0.4);
+       }
+    }
+    &__form-input {
+        width: 49%;
+    }
+    &__form-textarea {
+        min-height: 144px;
+        width: 100%;
+        resize: none
+       
+    }
+    &__form-btn {
+        text-transform: uppercase;
+        @extend %ubuntu-bold;
+        font-size: 14px;
+        line-height: 16px; 
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        padding: 9px 15px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.25s;
+        &:hover {
+            background-color: #fff;
+            color: #1C1C1C;
+        }
+    }
+    &__social {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+    &__social-link {
+        margin: 14px 0; 
+        opacity: 0.5;
+        transition: all 0.25s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
 
 @import "media";
