@@ -252,7 +252,7 @@
         width: 123px;
         font-size: 21px;
         line-height: 24px;
-        @extend %ubuntu-bolt;
+        @extend %ubuntu-bold;
         margin-bottom: 10px;
     }
 
@@ -329,6 +329,72 @@
         line-height: 18;
     }
 }
+
+//* QUESTION section
+.questions {
+    &__inner {
+        max-width: 757px;
+    } 
+    &__article {
+        background-color: rgba(23, 26, 28, 0.3);
+        max-width: 690px;
+        position: relative;
+        &:nth-child(3)::before {
+            content: "";
+            position: absolute;
+            width: 319px;
+            height: 125px;
+            top: -33px;
+            right: -386px;
+            background-image: url("images/question_dron.png");
+        }
+    }
+    &__article-title {
+        line-height: 28px;
+        font-size: 21px;
+        @extend %ubuntu-medium;
+        color: rgba(#fff, 0.8);
+        padding: 20px 10px 20px 40px;
+        position: relative;
+        margin-bottom: 4px;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+            right: -72px;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }   
+    &__article-text {
+        position: 0 5px 75px 50px;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0 0 4px;
+        visibility: hidden;
+        height: 0;
+        transition: all 0.25s;
+        opacity: 1;  
+    }
+    &__article.questions__article--active {
+        .questions__article-title::after {
+            transform: rotate(180deg);            
+        }
+        .questions__article-text {
+            visibility: visible;
+            height: 100%;  
+            position: 0 5px 75px 50px;
+            opacity: 1;         
+        }
+    }       
+}
+
+
 
 
 
