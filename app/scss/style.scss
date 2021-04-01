@@ -8,6 +8,7 @@
     left: 0;
     top: 30px;
     right: 0;
+    z-index: 10;
     &__inner {
         display: font;
         justify-content: space-between;
@@ -18,11 +19,29 @@
         font-size: 15px;
         @extend %ubuntu-medium;
     }
+    &__info-btn {
+        color: #fff;
+        background-color: transparent;
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 1px;
+        margin-right: 8px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    &__info-phone {
+        font-size: 16px;
+        line-height: 18px;
+        @extend %ubuntu-bold;
+    }
 }
 
-.header__nav {
-    &__header__nav-item {
-        display: inline-block;
+.menu {
+    &__list-item {
+        display: inline-block;    
+        & + .menu__list-item {
+            padding-left: 20px;
+        }    
     }
 }
 
