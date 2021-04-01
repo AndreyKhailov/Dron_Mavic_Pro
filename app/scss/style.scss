@@ -263,6 +263,75 @@
     
 }
 
+//* FEATURE section
+.feature {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }     
+    &__box {
+        width: 280px;  
+        position: relative;   
+        margin-top: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }         
+    }
+    &__box-2 {
+        margin-top: 140px;
+    }
+    &__box-4 {
+        margin-top: 160px;
+    }
+    &__box-1::before {
+        background-image: url("../images/pointer_1.svg");
+        width: 229px;
+        height: 114px;
+        top: 16px;
+        right: -140px;
+        
+    }
+    &__box-2::before {
+        background-image: url("../images/pointer_1.svg");
+        width: 346px;
+        height: 81px;
+        top: -65px;
+        right: -308px;
+    }
+    &__box-3::before {
+        background-image: url("../images/pointer_1.svg");
+        width: 258px;
+        height: 103px;
+        top: 16px;
+        left: -300px;
+    }
+    &__box-4::before {
+        background-image: url("../images/pointer_1.svg");
+        width: 124px;
+        height: 89px;
+        top: -73px;
+        left: -172px;
+    }
+    &__box-title {
+        font-size: 21px;
+        line-height: 28px;
+        @extend %ubuntu-bold;
+        margin-bottom: 10px;
+    }
+    &__box-text{
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18;
+    }
+}
+
+
+
 
 
 
