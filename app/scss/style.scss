@@ -99,9 +99,10 @@
         margin-bottom: 45px;
         text-shadow: 2px 2px 15px black;
     }        
-    &__picture-text {
+    &__picture-text {        
         margin: 45px 0 35px;
-        max-width: 325px;
+        max-width: 325px;        
+        text-shadow: 0 0 15px black;       
     }
     &__social {
         display: inline-block;        
@@ -123,8 +124,8 @@
 .description {
     &__inner {
         display: flex;
-        justify-content: space-between;
-        padding-left: 50px;
+        justify-content: space-between;        
+        padding: 0 50px;
     }
     &__text {
         max-width: 440px;
@@ -134,15 +135,13 @@
     }
     &__slider {
         max-width: 560px;
-        padding-top: 110px;
+        padding-top: 150px;
         position: relative;               
     }
+    &__fig,
     &__fig-img {
         position: relative;
-    }    
-    &__fig {
-        position: relative;
-    }
+    }  
     &__fig::before {
         content: "";
         position: absolute;
@@ -166,10 +165,7 @@
         cursor: pointer;             
         &:hover {
             background-color:#fff;
-            color:#1C1C1C;
-            // svg {
-            //     stroke:#1C1C1C;
-            // }
+            color:#1C1C1C;            
         }    
     }
     &__fig-text {
@@ -187,26 +183,27 @@
 //* BENEFITS section
 .benefits {
     &__inner {
-        display: flex;        
-        flex-wrap: wrap;
+        display: grid;        
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(150px, auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 96px;            
         padding-left: 25px;
+        margin-top: 110px;
     }
-    &__box {
-        //margin-bottom: 100px;
+    &__box {        
         display: flex;
-        align-items: flex-end; 
-        margin-bottom: 100px;  
-        &:nth__child(even){
-            margin-left: 40px;
-            transform: translateY(25px);
-        }                
+        align-items: baseline;  
+        &:nth-child(2) {
+            margin-top: 25px;
+        }
         &:nth-child(3) {
             margin-left: 30px;
         }
         &:nth-child(4) {
-            margin-left: 60px;
+            margin: 20px 0 0 40px;
         }
-        &:first-child(1),
+        &:first-child(),
         &:nth-child(3) {
            position: relative;
            &::before,
@@ -222,8 +219,8 @@
                 background-image: url("../images/curved_1-2.svg");
                 width: 245px;
                 height: 45px; 
-                right: -56px;
-                top: 31px;           
+                right: -16px;
+                top: 30px;           
             }
         }
         &:nth-child(3) {
@@ -231,18 +228,18 @@
                 background-image: url("../images/curved_3-4.svg");
                 width: 254px;
                 height: 43px;    
-                right: -55px;
-                top: 50px;              
+                right: -60px;
+                top: 30px;              
             }
             &::after {
                 background-image: url("../images/curved_2-3.svg");
                 width: 463px;
                 height: 62px;
-                right: -54px;
-                top: -70px;
+                right: -30px;
+                top: -80px;
             }
         }
-    }
+    }    
     &__num {
         line-height: 41px;
         font-size: 36px;
@@ -250,25 +247,27 @@
         margin-right: 10px;
     }
     &__info {
-        display: flex;          
-    }
-    &__info-img {
+        display: flex;
         position: relative;
-        margin-right: 20px;
+        margin: 0;          
         &::before {
             content: "";
             position: absolute;
+            border: 2px solid #fff;
             width: 193px;
             height: 128px;
-            border: 2px solid #fff;
-            right: -12px;
-            top: -12px;
+            left: 10px;
+            top: -8px;
             z-index: -1;
         }
     }
+    &__info-img {
+        margin-right: 20px;
+        width: 195px;
+        height: 130px;
+    } 
     &__info-desc {
-        width: 300px;
-
+        max-width: 300px;
     }
     &__info-title {
         width: 123px;
@@ -277,12 +276,10 @@
         @extend %ubuntu-bold;
         margin-bottom: 10px;
     }
-
     &__info-text {
         font-size: 15px;
         line-height: 18px; 
-    }
-    
+    }    
 }
 
 //* FEATURE section
