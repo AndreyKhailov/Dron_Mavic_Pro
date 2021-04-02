@@ -1,11 +1,11 @@
 $(function() {
 
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    $(".description__slider").slick({    //!!!!
-        prevArrow: " ",                  //!!!!
-        nextArrow: " ",                  //!!!!
-        infinite: false,                 //!!!!
-    })                                   //!!!!
+    // $(".description__slider").slick({    //!!!!
+    //     prevArrow: " ",                  //!!!!
+    //     nextArrow: " ",                  //!!!!
+    //     infinite: false,                 //!!!!
+    // })                                   //!!!!
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     $(".questions__article-title").on("click", function() {

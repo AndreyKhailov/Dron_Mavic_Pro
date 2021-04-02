@@ -53,19 +53,17 @@
         &:hover {
             color: gold;
         }
-    }
-}
-
-.menu {
-    &__list-item {
+    }    
+    &__menu-item {
         display: inline-block;    
-        & + .menu__list-item {
+        & + .header__menu-item {
             padding-left: 20px;
         }    
         &:hover {
             color: gold;
         }        
     }
+    
 }
 
 //* TOP section
@@ -285,57 +283,81 @@
 //* FEATURE section
 .feature {
     &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }     
-    &__box {
-        width: 280px;  
-        position: relative;   
-        margin-top: 10px;
+        display: grid;
+        grid-template-areas: 
+        "box-1  box-2" 
+        "box-3  box-4";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 280px 280px;
+        grid-gap: 10px;
+        //height: 100%;
+        margin: 0;
+        justify-content: space-between; 
+        padding-left: 50px;
+        position: relative;
+        // &::before {
+        //     content: "";           
+        //     background-image: url("../images/main_dron.png");
+        //     background-repeat: no-repeat;
+        //     //background-size: cover;
+        //     width: 50vw;
+        //     height: 50vh;
+        //     margin-left: 20vw;
+        //     z-index: 10;          
+        // }
+    }
+    // &__box-1,  
+    // &__box-2,  
+    // &__box-3,  
+    // &__box-4 {
+    //     position: absolute;        
+    // }  
+    
+    &__box-1 {
+        grid-area: box-1;              
         &::before {
-            content: "";
-            position: absolute;
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: contain;
-        }         
+            background-image: url("../images/pointer_1.svg");
+            width: 229px;
+            height: 114px;
+            top: 16px;
+            right: -140px;
+        }
     }
     &__box-2 {
-        margin-top: 140px;
+        grid-area: box-2; 
+        &::before {
+            background-image: url("../images/pointer_1.svg");
+            width: 346px;
+            height: 81px;
+            top: -65px;
+            right: -308px;
+        }
+    }
+    &__box-3 {
+        grid-area: box-3; 
+        &::before {
+            background-image: url("../images/pointer_1.svg");
+            width: 258px;
+            height: 103px;
+            top: 16px;
+            left: -300px;
+        }
     }
     &__box-4 {
-        margin-top: 160px;
+        grid-area: box-4; 
+        &::before {
+            background-image: url("../images/pointer_1.svg");
+            width: 124px;
+            height: 89px;
+            top: -73px;
+            left: -172px;
+        }
     }
-    &__box-1::before {
-        background-image: url("../images/pointer_1.svg");
-        width: 229px;
-        height: 114px;
-        top: 16px;
-        right: -140px;
-        
-    }
-    &__box-2::before {
-        background-image: url("../images/pointer_1.svg");
-        width: 346px;
-        height: 81px;
-        top: -65px;
-        right: -308px;
-    }
-    &__box-3::before {
-        background-image: url("../images/pointer_1.svg");
-        width: 258px;
-        height: 103px;
-        top: 16px;
-        left: -300px;
-    }
-    &__box-4::before {
-        background-image: url("../images/pointer_1.svg");
-        width: 124px;
-        height: 89px;
-        top: -73px;
-        left: -172px;
-    }
+    &__box-5 {
+        grid-area: box-5;
+        position: absolute;
+        bottom: 45px;                     
+    } 
     &__box-title {
         font-size: 21px;
         line-height: 28px;
@@ -345,8 +367,9 @@
     &__box-text{
         font-weight: 300;
         font-size: 15px;
-        line-height: 18;
+        line-height: 18px;
     }
+    
 }
 
 //* QUESTION section
@@ -364,9 +387,11 @@
             width: 319px;
             height: 125px;
             top: -33px;
-            right: -386px;
-            background-image: url("images/question_dron.png");
+            right: -392px;
+            background-image: url("../images/question_dron.png");
+            z-index: 1;
         }
+
     }
     &__article-title {
         line-height: 28px;
@@ -378,7 +403,7 @@
         margin-bottom: 4px;
         cursor: pointer;
         &::after {
-            content: "";
+            content: url("../images/question_arrow.svg");
             position: absolute;
             width: 72px;
             height: 67px;
@@ -390,14 +415,13 @@
             align-items: center;
         }
     }   
-    &__article-text {
-        position: 0 5px 75px 50px;
+    &__article-text {        
         font-size: 15px;
         line-height: 22px;
         margin: 0 0 4px;
         visibility: hidden;
         height: 0;
-        transition: all 0.25s;
+        transition: all 0.3s;
         opacity: 1;  
     }
     &__article.questions__article--active {
@@ -407,7 +431,7 @@
         .questions__article-text {
             visibility: visible;
             height: 100%;  
-            position: 0 5px 75px 50px;
+            padding: 0 5px 45px 75px;
             opacity: 1;         
         }
     }       

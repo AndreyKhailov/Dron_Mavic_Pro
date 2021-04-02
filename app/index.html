@@ -19,13 +19,13 @@
                     <img class="header__logo-img" src="images/logo_img.png" alt="logo mavic">
                     <img class="header__logo-text" src="images/logo_text.svg" alt="mavic 2 pro">
                 </a>                 
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__list-item"><a class="menu__list-link" href="#">О ДРОНЕ</a></li>
-                        <li class="menu__list-item"><a class="menu__list-link" href="#">ПРЕИМУЩЕСТВА</a></li>
-                        <li class="menu__list-item"><a class="menu__list-link" href="#">ХАРАКТЕРИСТИКИ</a></li>
-                        <li class="menu__list-item"><a class="menu__list-link" href="#">ВОПРОСЫ</a></li>
-                        <li class="menu__list-item"><a class="menu__list-link" href="#">КОНТАКТЫ</a></li>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item"><a class="header__menu-link" href="#">О ДРОНЕ</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link" href="#">ПРЕИМУЩЕСТВА</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link" href="#">ХАРАКТЕРИСТИКИ</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link" href="#">ВОПРОСЫ</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link" href="#">КОНТАКТЫ</a></li>
                     </ul>
                 </nav>   
                 <div class="header__info">
@@ -169,12 +169,12 @@
         </div>
     </section>
     <!--************ Feature section ************-->
-    <section id="feature" class="page-section feature">
+    <section id="feature" class="page-section">
         <div class="page-section__wrapper">
             <div class="container">
                 <h2 class="feature__title title">Характеристики</h2>
                 <div class="feature__inner">
-                    <section class="feature__box feature__box-1">
+                    <section class="feature__box-1 ">
                         <h4 class="feature__box-title">Dlog-M 10 бит</h4>
                         <p class="feature__box-text">
                             Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более 
@@ -183,19 +183,15 @@
                         </p>
                     </section>
     
-                    <section class="feature__box feature__box-2">
+                    <section class="feature__box-2">
                         <h4 class="feature__box-title">Матрица CMOS 1</h4>
                         <p class="feature__box-text">
                             Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза 
                             превышает показатели Mavic Pro
                         </p>
-                    </section>
+                    </section>  
     
-                    <section class="feature__box">
-                        <img class="feature__box-img" src="images/main_dron.png" alt="mavic" >
-                    </section>
-    
-                    <section class="feature__box feature__box-3">
+                    <section class="feature__box-3 ">
                         <h4 class="feature__box-title">Камера Hasselblad</h4>
                         <p class="feature__box-text">
                             Камера Hasselblad L1D-20С известны эргономичным дизайном 
@@ -203,12 +199,16 @@
                         </p>
                     </section>
     
-                    <section class="feature__box feature__box-4">
+                    <section class="feature__box-4 ">
                         <h4 class="feature__box-title">Видео HDR</h4>
                         <p class="feature__box-text">
                             Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить 
                             к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре
                         </p>
+                    </section>
+
+                    <section class="feature__box-5">
+                        <img class="feature__box-img" src="images/main_dron.png" alt="mavic" >
                     </section>
                 </div>
                 <control class="scroll__btn">
@@ -218,13 +218,13 @@
         </div>
     </section>
     <!--************ Questions section ************-->
-    <section id="questions" class="page-section questions">
+    <section id="questions" class="page-section">
         <div class="page-section__wrapper">
             <div class="container">
-                <h2 class="questions__title title">Остались вопросы?</h2>
+                <h2 class="title">Остались вопросы?</h2>
                 <div class="questions__inner">
                     
-                    <article class="questions__article">
+                    <article class="questions__article questions__article--active">
                         <h6 class="questions__article-title">Какие отличия между Mavic 2 Pro и Mavic 2 Zoom?</h6>
                         <p class="questions__article-text">
                             В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).
@@ -311,7 +311,10 @@
     </section>
 
     <!--! =================== END MAIN AREA =================== -->
-    
+
+    <!-- Connecting script files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>  
     <script src="js/main.min.js"></script>
 </body>
 </html>
