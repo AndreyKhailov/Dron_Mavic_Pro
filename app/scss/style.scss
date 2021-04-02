@@ -441,11 +441,11 @@
 .contacts {
     &__inner {
         display: flex;
-        padding-left: 25px;
+        padding-left: 50px;
     }
     &__info {
         width: 240px;
-        margin-right: 60px;
+        margin-right: 75px;
     }
     &__article {
         margin-bottom: 30px;
@@ -454,12 +454,16 @@
         line-height: 24px;
         font-size: 21px;
         @extend %ubuntu-bold;
-        margin: 0 0 13px;
+        margin: 0 0 13px ;
     }
     &__article-phone,
     &__article-email {
+        margin-left: 10px;
         font-size: 15px;
         line-height: 18px;
+        &:hover {
+            color: gold;
+        }
     }
     &__article-email:hover {
         text-decoration: underline;
@@ -472,16 +476,17 @@
         line-height: 24px;
         font-size: 21px;
         @extend %ubuntu-bold;
-        margin: 0 0 13px;        
+        margin: 0 0 16px;        
     }
     &__form-text {
        font-style: 15px;
        line-height: 18px;
-       margin: 0 0 12px;
+       margin: 0 0 14px;
     }
     &__form-line {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
     &__form-input,
     &__form-textarea {
@@ -490,11 +495,8 @@
        @extend %ubuntu-regular;
        padding: 15px;    
        font-size: 13px; 
-       line-height: 15px;
-       color: #fff;
-       &::placeholder {
-           color: rgba(#fff, 0.4);
-       }
+       line-height: 15px;       
+       color: rgba(#fff, 0.4);       
     }
     &__form-input {
         width: 49%;
@@ -502,8 +504,8 @@
     &__form-textarea {
         min-height: 144px;
         width: 100%;
-        resize: none
-       
+        resize: none;
+        margin-bottom: 16px; 
     }
     &__form-btn {
         text-transform: uppercase;
