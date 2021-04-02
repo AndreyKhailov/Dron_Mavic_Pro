@@ -16,11 +16,19 @@
         justify-content: space-between;
         align-items: center;
         min-height: 30px;
+        padding: 30px 0;        
         text-transform: uppercase;
-        line-height: 17;
+        line-height: 17px;
         font-size: 15px;
         @extend %ubuntu-medium;
     }
+    &__logo {
+        display: flex;        
+        align-items: center; 
+    }
+    &__logo-img {
+        margin-right: 15px;  
+    }    
     &__info-btn {
         color: #fff;
         background-color: transparent;
@@ -29,16 +37,21 @@
         border-radius: 1px;
         margin-right: 8px;
         text-transform: uppercase;
+        transition: all 0.3s;
         cursor: pointer;
         &:hover {
             color:#1C1C1C;
-            background-color: #fff;
+            background-color: #fff;            
         }
     }
     &__info-phone {
         font-size: 16px;
         line-height: 18px;
+        transition: all 0.3s;
         @extend %ubuntu-bold;
+        &:hover {
+            color: gold;
+        }
     }
 }
 
@@ -48,6 +61,9 @@
         & + .menu__list-item {
             padding-left: 20px;
         }    
+        &:hover {
+            color: gold;
+        }
     }
 }
 
@@ -62,13 +78,14 @@
         right: 0;
         bottom: 0;
         background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
-        opacity: 0.4; 
+        opacity: 0.5; 
     }   
     &__wrapper {
         display: flex;
         align-items: flex-end;
     } 
-    &__inner {
+    &__inner,
+    &__picture {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -78,22 +95,26 @@
         font-size: 96px;
         line-height: 115px;
         @extend %sf-semibold;
-        margin-bottom: 25px;
-    }
+        margin-bottom: 45px;
+        text-shadow: 2px 2px 15px black;
+    }        
     &__picture-text {
-        margin: 25px 0 35px;
+        margin: 45px 0 35px;
         max-width: 325px;
     }
     &__social {
-        display: inline-block;
+        display: inline-block;        
         margin: 0 25px;
     }
     &__social-link {
         opacity: 0.5;
-        transition: all 0.25s;
+        transition: all 0.3s;
         &:hover {
             opacity: 1;
         }
+        & + .top__social-link {
+            margin-left: 30px;
+        }           
     }
 }
 
