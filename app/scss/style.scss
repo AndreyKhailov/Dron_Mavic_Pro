@@ -62,8 +62,7 @@
         &:hover {
             color: gold;
         }        
-    }
-    
+    }    
 }
 
 //* TOP section
@@ -130,52 +129,37 @@
         p {
             margin-bottom: 30px;
         }
-    }
-    &__slider {
-        max-width: 560px;
-        padding-top: 150px;
-        position: relative;               
-    }
-    &__fig,
-    &__fig-img {
+    }    
+    &__box {
         position: relative;
-    }  
-    &__fig::before {
-        content: "";
-        position: absolute;
+        max-width: 560px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 560px;
+            height: 280px; 
+            top: 225px; 
+            right: 0;
+            border: 4px solid #FFFFFF; 
+        } 
+    }    
+    &__box-img {
         width: 560px;
         height: 280px; 
-        top: -10px; 
-        right: -90px;
-        border: 4px solid #FFFFFF; 
-    } 
-    &__control {
         position: absolute;
-        bottom: -36px;
-        right: -40px;
-    }
-    &__control-prev,
-    &__control-next {
-        padding: 16px 26px;
-        border: none;
-        background-color: #1C1C1C;        
-        transition: all 0.25s;
-        cursor: pointer;             
-        &:hover {
-            background-color:#fff;
-            color:#1C1C1C;            
-        }    
-    }
-    &__fig-text {
+        right: 10px;
+        top: 235px; 
+    }  
+    &__box-text {
         width: 285px;
-        position: absolute;
-        text-align: right;
-        font-size: 24px;
+        position: absolute;        
+        font-size: 20px;
         line-height: 28px;
         @extend %ubuntu-medium;
-        bottom: -20px;
-        left: -150px;        
-    }
+        bottom: -265px;
+        right: 450px; 
+        z-index: 5;
+    }    
 }
 
 //* BENEFITS section
@@ -289,74 +273,72 @@
         "box-3  box-4";
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 280px 280px;
-        grid-gap: 10px;
-        //height: 100%;
-        margin: 0;
+        grid-gap: 25vh;
+        height: 100%;        
         justify-content: space-between; 
         padding-left: 50px;
-        position: relative;
-        // &::before {
-        //     content: "";           
-        //     background-image: url("../images/main_dron.png");
-        //     background-repeat: no-repeat;
-        //     //background-size: cover;
-        //     width: 50vw;
-        //     height: 50vh;
-        //     margin-left: 20vw;
-        //     z-index: 10;          
-        // }
-    }
-    // &__box-1,  
-    // &__box-2,  
-    // &__box-3,  
-    // &__box-4 {
-    //     position: absolute;        
-    // }  
-    
+        position: relative;        
+    }    
     &__box-1 {
-        grid-area: box-1;              
+        grid-area: box-1;  
+        position: relative;   
         &::before {
+            content: "";
             background-image: url("../images/pointer_1.svg");
             width: 229px;
             height: 114px;
-            top: 16px;
-            right: -140px;
+            top: 75px;
+            left: 290px;
+            position: absolute; 
         }
     }
     &__box-2 {
+        position: relative; 
         grid-area: box-2; 
         &::before {
-            background-image: url("../images/pointer_1.svg");
-            width: 346px;
-            height: 81px;
-            top: -65px;
-            right: -308px;
+            content: "";
+            position: absolute;
+            background-image: url("../images/pointer_3.svg");
+            width: 258px;
+            height: 103px;            
+            top: 90px;
+            right: 290px;
         }
     }
     &__box-3 {
         grid-area: box-3; 
+        position: relative; 
         &::before {
-            background-image: url("../images/pointer_1.svg");
-            width: 258px;
-            height: 103px;
-            top: 16px;
-            left: -300px;
+            content: "";
+            background-image: url("../images/pointer_2.svg");
+            position: absolute;
+            width: 346px;
+            height: 81px;
+            bottom: 130px;
+            left: 200px;
+            z-index: 10;
         }
     }
     &__box-4 {
         grid-area: box-4; 
+        position: relative; 
         &::before {
-            background-image: url("../images/pointer_1.svg");
+            content: "";
+            background-image: url("../images/pointer_4.svg");
+            position: absolute;
             width: 124px;
             height: 89px;
-            top: -73px;
-            left: -172px;
+            bottom: 132px;
+            right: 300px;
+            z-index: 10;
         }
     }
     &__box-5 {
         grid-area: box-5;
         position: absolute;
-        bottom: 45px;                     
+        bottom: 18vh; 
+        left: 23vw;  
+        z-index: 5;                 
     } 
     &__box-title {
         font-size: 21px;
@@ -368,8 +350,7 @@
         font-weight: 300;
         font-size: 15px;
         line-height: 18px;
-    }
-    
+    }    
 }
 
 //* QUESTION section
