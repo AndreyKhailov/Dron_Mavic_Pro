@@ -67,7 +67,7 @@
 
 //* TOP section
 .top {
-    background-image: url("../images/header_bg.jpg");
+    background-image: url("../images/header_top.jpg");
     &::before {
         content: "";
         position: absolute;
@@ -95,9 +95,15 @@
         @extend %sf-semibold;
         margin-bottom: 45px;
         text-shadow: 2px 2px 15px black;
+        height: 45vh;
     }        
+    &__picture-img {
+        width: 520px;        
+        position: absolute;
+        bottom: 15vh;
+    }
     &__picture-text {        
-        margin: 45px 0 35px;
+        margin-bottom: 35px;
         max-width: 325px;        
         text-shadow: 0 0 15px black;       
     }
