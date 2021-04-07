@@ -22,14 +22,7 @@
         line-height: 17px;
         font-size: 15px;
         @extend %ubuntu-medium;
-    }
-    &__logo {
-        display: flex;        
-        align-items: center; 
-    }
-    &__logo-img {
-        margin-right: 15px;  
-    }    
+    } 
     &__info-btn {
         color: #fff;
         background-color: transparent;
@@ -53,7 +46,10 @@
         &:hover {
             color: gold;
         }
-    }    
+    } 
+    &__menu-burger {
+        display: none;
+    }   
     &__menu-item {
         display: inline-block;    
         & + .header__menu-item {
@@ -63,6 +59,9 @@
             color: gold;
         }        
     }    
+    &__mobile-phone {
+        display: none;
+    }
 }
 
 //* TOP section
