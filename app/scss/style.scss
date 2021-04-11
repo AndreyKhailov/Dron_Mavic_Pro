@@ -23,6 +23,16 @@
         font-size: 15px;
         @extend %ubuntu-medium;
     } 
+    &__menu-item {
+        display: inline-block; 
+        padding-left: 20px;
+        &:hover {
+            color: gold;
+        }        
+    }    
+    &__mobile-phone {
+        display: none;
+    }
     &__info-btn {
         color: #fff;
         background-color: transparent;
@@ -50,18 +60,6 @@
     &__menu-burger {
         display: none;
     }   
-    &__menu-item {
-        display: inline-block;    
-        & + .header__menu-item {
-            padding-left: 20px;
-        }    
-        &:hover {
-            color: gold;
-        }        
-    }    
-    &__mobile-phone {
-        display: none;
-    }
 }
 
 //* TOP section
