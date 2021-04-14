@@ -263,7 +263,39 @@
             bottom: 18vh; 
             left: 15vw;  
         } 
-    } 
+    }
+    .contacts {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__info {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 30px;
+            margin-right: 0px;
+        }
+        &__article {
+            width: 240px;
+        }
+        &__form {
+            width: 100%;
+            margin-right: 0;
+        }
+        &__social {
+            flex-direction: row;
+            padding-top: 15px;           
+            margin: 0 auto;
+        }        
+        &__social-link {            
+            & + .contacts__social-link {
+                margin-left: 30px;
+            }
+            &:last-child {
+                margin-right: 50px;
+            }           
+        }
+    }
 } 
 
 @media (max-width: 900px) {
@@ -303,6 +335,24 @@
             transform: scale(0.75);
         }        
     } 
+}
+
+@media (max-width: 800px) {
+    .questions {
+        &__article {
+            padding-right: 60px;    
+        }
+        &__article-title {
+            line-height: 28px;
+            font-size: 21px;
+            padding: 15px 10px 15px 40px;
+            &::after {
+                width: 56px;
+                height: 50px;
+                right: -60px;
+            }
+        }
+    }    
 }
 
 @media (max-width: 748px) {
@@ -350,5 +400,15 @@
         &__box-5 {
             display: none;
         }
-    }         
+    }
+    .contacts__form-line {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }        
+    .contacts__form-input {
+        width: 100%;
+        &:first-child {
+            margin-bottom: 1px;
+        } 
+    }  
 } 
