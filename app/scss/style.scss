@@ -136,7 +136,7 @@
     &__box {
         position: relative;
         max-width: 560px;
-        &:before {
+        &::before {
             content: "";
             position: absolute;
             width: 560px;
