@@ -1,13 +1,4 @@
-$(function() {
-
-    $(".questions__article-title").on("click", function() {
-        $(".questions__article").removeClass("questions__article--active")
-        $(this).parent().addClass("questions__article--active")
-    })
-})
-
 // ************** Create mobile menu ******************************
-
 const   burgerBtn = document.getElementById('menu-burger')
         mobileMenu = document.getElementById('menu')  
 // Mobile menu is opened and closed by clicking on the button menu       
@@ -29,6 +20,29 @@ mobileMenu.addEventListener('click', () => {
 // ****************************************************************
 
 // ************** Create Dropdown section *************************
-
-
+const   dropdown_1 = document.getElementById('dropdown_1')
+        dropdown_2 = document.getElementById('dropdown_2')
+        dropdown_3 = document.getElementById('dropdown_3')
+        dropdown_4 = document.getElementById('dropdown_4');
+// Open and close dropdown menu -->    
+dropdown_1.addEventListener('click', () => {
+    dropdown_1.classList.value === "questions__article dropdown--active"
+    ? dropdown_1.classList.remove('dropdown--active')
+    : dropdown_1.classList.add('dropdown--active'); 
+});
+dropdown_2.addEventListener('click', () => {
+    dropdown_2.classList.value === "questions__article dropdown--active"
+    ? dropdown_2.classList.remove('dropdown--active')
+    : dropdown_2.classList.add('dropdown--active'); 
+});
+dropdown_3.addEventListener('click', () => {
+    dropdown_3.classList.value === "questions__article dropdown--active"
+    ? dropdown_3.classList.remove('dropdown--active')
+    : dropdown_3.classList.add('dropdown--active'); 
+});
+dropdown_4.addEventListener('click', () => {
+    dropdown_4.classList.value === "questions__article dropdown--active"
+    ? dropdown_4.classList.remove('dropdown--active')
+    : dropdown_4.classList.add('dropdown--active'); 
+});
 // ****************************************************************

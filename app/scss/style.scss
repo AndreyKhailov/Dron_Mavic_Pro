@@ -405,10 +405,10 @@
         margin: 0 0 4px;
         visibility: hidden;
         height: 0;
-        transition: all 0.3s;
+        transition: all 0.2s;
         opacity: 1;  
     }
-    &__article.questions__article--active {
+    &__article.dropdown--active {
         .questions__article-title::after {
             transform: rotate(180deg);            
         }
