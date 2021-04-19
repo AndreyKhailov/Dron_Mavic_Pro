@@ -25,10 +25,7 @@
     } 
     &__menu-item {
         display: inline-block; 
-        padding-left: 20px;
-        &:hover {
-            color: gold;
-        }        
+        padding-left: 20px;              
     }    
     &__mobile-phone {
         display: none;
@@ -43,7 +40,8 @@
         text-transform: uppercase;
         transition: all 0.3s;
         cursor: pointer;
-        &:hover {
+        &:hover, 
+        &:focus {
             color:#1C1C1C;
             background-color: #fff;            
         }
@@ -52,14 +50,15 @@
         font-size: 16px;
         line-height: 18px;
         transition: all 0.3s;
-        @extend %ubuntu-bold;
-        &:hover {
-            color: gold;
-        }
+        @extend %ubuntu-bold;        
     } 
     &__menu-burger {
         display: none;
-    }   
+    }
+    &__menu-item:hover, &__info-phone:hover,
+    &__menu-link:focus, &__info-phone:focus {
+        color: gold;
+    }    
 }
 
 //* TOP section
@@ -111,7 +110,8 @@
     &__social-link {
         opacity: 0.5;
         transition: all 0.3s;
-        &:hover {
+        &:hover, 
+        &:focus {
             opacity: 1;
         }
         & + .top__social-link {
@@ -148,7 +148,7 @@
     }    
     &__box-img {
         width: 560px;
-        height: 280px; 
+        height: 300px; 
         position: absolute;
         right: 10px;
         top: 235px; 
@@ -375,7 +375,6 @@
             background-image: url("../images/question_dron.png");
             z-index: 1;
         }
-
     }
     &__article-title {
         line-height: 28px;
@@ -445,7 +444,8 @@
         margin-left: 10px;
         font-size: 15px;
         line-height: 18px;
-        &:hover {
+        &:hover, 
+        &:focus {
             color: gold;
         }
     }
@@ -504,7 +504,8 @@
         background-color: transparent;
         cursor: pointer;
         transition: all 0.25s;
-        &:hover {
+        &:hover, 
+        &:focus {
             background-color: #fff;
             color: #1C1C1C;
         }
@@ -518,7 +519,8 @@
         margin: 14px 0; 
         opacity: 0.5;
         transition: all 0.25s;
-        &:hover {
+        &:hover, 
+        &:focus {
             opacity: 1;
         }
     }
