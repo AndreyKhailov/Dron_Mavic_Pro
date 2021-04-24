@@ -114,6 +114,31 @@
         position: absolute;
         bottom: 15vh;
         width: 520px;
+        animation: mavic;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes mavic {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        60% {
+            transform: translateY(-20px);
+        }
+
+        75% {
+            transform: translateY(15px);
+        }
+
+        90% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
 
     &__picture-text {
