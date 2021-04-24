@@ -100,7 +100,8 @@
             font-size: 18px;
             font-weight: 400;
             background: rgba(#1c1c1c, 0.95);
-            transition: transform 0.4s;
+            opacity: 0;
+            transition: transform 0.3s;
             transform: translateX(-100%);
         }
 
@@ -125,7 +126,8 @@
     }
 
     .header__menu-list.menu--active {
-        transform: translateY(0);
+        opacity: 1;
+        transform: translateX(0);
 
         .header__info-phone,
         .header__mobile-phone {
