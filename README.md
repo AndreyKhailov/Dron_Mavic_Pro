@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/AndreyKhailov/Dron_Mavic_Pro/blob/master/app/images/logo.jpg" width="400"></p>
+<p align="center"><img src="https://github.com/AndreyKhailov/Dron_Mavic_Pro/blob/master/app/images/logo.jpg" width="800"></p>
 
 ## О проекте
 
